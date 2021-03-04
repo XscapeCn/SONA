@@ -10,9 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="reGit">
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update README">
+      <change afterPath="$PROJECT_DIR$/src/GeneFeature/FStringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +48,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/guava-23.0.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIGER" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -134,13 +135,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,7 +178,8 @@
       <workItem from="1605227884255" duration="16565000" />
       <workItem from="1605489997698" duration="1926000" />
       <workItem from="1614581032261" duration="46000" />
-      <workItem from="1614845788871" duration="3190000" />
+      <workItem from="1614845788871" duration="11556000" />
+      <workItem from="1614857799056" duration="1107000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -212,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614848749682</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update README">
+      <created>1614849069651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614849069651</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update README">
+      <created>1614849092341</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614849092341</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,21 +254,30 @@
       <path value="$PROJECT_DIR$/src" />
     </ignored-roots>
     <MESSAGE value="reGit" />
-    <option name="LAST_COMMIT_MESSAGE" value="reGit" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614846490796">
+    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614858814283">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614846490796" />
-    <state x="505" y="135" key="SettingsEditor" timestamp="1614846859279">
+    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614858814283" />
+    <state x="664" y="178" key="NewModule_or_Project.wizard" timestamp="1614858816872">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614846859279" />
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614848822909">
+    <state x="664" y="178" key="NewModule_or_Project.wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858816872" />
+    <state x="505" y="135" key="SettingsEditor" timestamp="1614858900500">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614848822909" />
+    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614849093229">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614849093229" />
+    <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="434" y="135" key="new project wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858560854" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

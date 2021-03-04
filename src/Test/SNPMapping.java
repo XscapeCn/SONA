@@ -1,6 +1,6 @@
 package Test;
 
-import xujun.analysis.rnaseq.GeneFeature;
+import GeneFeature.GeneFeature;
 
 import java.io.*;
 import java.net.HttpURLConnection;
