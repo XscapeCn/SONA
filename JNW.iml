@@ -6,9 +6,6 @@
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="module" module-name="GroupPlantGenetics" />
-    <orderEntry type="library" name="TIGER" level="project" />
-    <orderEntry type="module" module-name="TIGER" />
+    <orderEntry type="library" name="guava-23.0" level="project" />
   </component>
 </module>

@@ -6,39 +6,17 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Prioritization/NM/Demo05TKWTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo01Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo02Pattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo03Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo04Function.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo05FunctionPlus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo06FunctionR1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo07FunctionR1R2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QTL/Demo08FunctionR1AllRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Demo13Transfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Demo14TKW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo04GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prioritization/NM/Demo04GATest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prioritization/NM/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/NetworkBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prioritization/NM/NetworkBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QTL/Fasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QTL/Fasta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QTL/FindPos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QTL/FindPos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QTL/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QTL/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Demo06GeneMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Demo06GeneMapping.java" afterDir="false" />
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="reGit">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/guava_23_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-23.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JNW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JNW.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src" beforeDir="false" afterPath="$PROJECT_DIR$/src" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,38 +31,43 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1htQqSesOHWEXC88lGNZt2lu2uY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIGER" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/guava-23.0.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="str" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Nature\2020PreExperiment\JNW\GWAS\GA" />
-      <recent name="D:\Documents\DataScientist\850 samples of wheat\JNW" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Nature\2020PreExperiment\JNW" />
+      <recent name="D:\Documents\DataScientist\850 samples of wheat\JNW" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Nature\2020PreExperiment\JNW\" />
+      <recent name="H:\Nature\2020PreExperiment\JNW\GWAS\GA" />
       <recent name="D:\Documents\DataScientist\850 samples of wheat\JNW" />
     </key>
   </component>
@@ -195,7 +178,16 @@
       <workItem from="1605227884255" duration="16565000" />
       <workItem from="1605489997698" duration="1926000" />
       <workItem from="1614581032261" duration="46000" />
+      <workItem from="1614845788871" duration="1066000" />
     </task>
+    <task id="LOCAL-00001" summary="reGit">
+      <created>1614845815673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614845815673</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,92 +203,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src" />
+    </ignored-roots>
+    <MESSAGE value="reGit" />
+    <option name="LAST_COMMIT_MESSAGE" value="reGit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="772" y="357" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603454462056">
+    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614846490796">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="772" y="357" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1122@0.0.2048.1122" timestamp="1603454462056" />
-    <state x="1342" y="277" key="#com.intellij.ide.util.MemberChooser" timestamp="1603096538813">
+    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614846490796" />
+    <state x="505" y="135" key="SettingsEditor" timestamp="1614846859279">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="1342" y="277" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1122@0.0.2048.1122" timestamp="1603096538813" />
-    <state x="1116" y="338" width="572" height="392" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1605263328146">
+    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614846859279" />
+    <state x="617" y="275" key="Vcs.Push.Dialog.v2" timestamp="1614845835886">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="1116" y="338" width="572" height="392" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.2048.1122@0.0.2048.1122" timestamp="1605263328146" />
-    <state x="906" y="459" key="DetectedRootsChooserDialog" timestamp="1605488352920">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="906" y="459" key="DetectedRootsChooserDialog/0.0.2048.1122@0.0.2048.1122" timestamp="1605488352920" />
-    <state x="805" y="316" key="FileChooserDialogImpl" timestamp="1605489297302">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="805" y="316" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1605489297302" />
-    <state width="2005" height="320" key="GridCell.Tab.0.bottom" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.0.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.0.center" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.0.center/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.0.left" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.0.left/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.0.right" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.0.right/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.1.bottom" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.1.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.1.center" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.1.center/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.1.left" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.1.left/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state width="2005" height="320" key="GridCell.Tab.1.right" timestamp="1605489931055">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state width="2005" height="320" key="GridCell.Tab.1.right/0.0.2048.1122@0.0.2048.1122" timestamp="1605489931055" />
-    <state x="641" y="178" key="NewModule_or_Project.wizard" timestamp="1605488550946">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="641" y="178" key="NewModule_or_Project.wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1605488550946" />
-    <state x="609" y="157" key="SettingsEditor" timestamp="1605488570218">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="609" y="157" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1605488570218" />
-    <state x="741" y="449" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603454487338">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="741" y="449" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2048.1122@0.0.2048.1122" timestamp="1603454487338" />
-    <state x="566" y="202" width="1000" height="881" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602929203616">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="566" y="202" width="1000" height="881" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2048.1122@0.0.2048.1122" timestamp="1602929203616" />
-    <state x="755" y="254" key="extract.method.dialog" timestamp="1603019033073">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="755" y="254" key="extract.method.dialog/0.0.2048.1122@0.0.2048.1122" timestamp="1603019033073" />
-    <state x="434" y="135" key="new project wizard" timestamp="1605487584608">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="434" y="135" key="new project wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1605487584608" />
-    <state x="681" y="261" key="run.anything.popup" timestamp="1605186197871">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="681" y="261" key="run.anything.popup/0.0.2048.1122@0.0.2048.1122" timestamp="1605186197871" />
-    <state x="687" y="246" width="672" height="678" key="search.everywhere.popup" timestamp="1600840581145">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="687" y="246" width="672" height="678" key="search.everywhere.popup/0.0.2048.1122@0.0.2048.1122" timestamp="1600840581145" />
+    <state x="617" y="275" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614845835886" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
