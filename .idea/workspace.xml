@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update" />
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +178,7 @@
       <workItem from="1605489997698" duration="1926000" />
       <workItem from="1614581032261" duration="46000" />
       <workItem from="1614845788871" duration="11556000" />
-      <workItem from="1614857799056" duration="1337000" />
+      <workItem from="1614857799056" duration="2191000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -240,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614859058575</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1614859283601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614859283601</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,10 +292,10 @@
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859060051">
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859284862">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859060051" />
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859284862" />
     <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
