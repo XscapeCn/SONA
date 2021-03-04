@@ -10,11 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update README">
-      <change afterPath="$PROJECT_DIR$/src/GeneFeature/FStringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +175,7 @@
       <workItem from="1605489997698" duration="1926000" />
       <workItem from="1614581032261" duration="46000" />
       <workItem from="1614845788871" duration="11556000" />
-      <workItem from="1614857799056" duration="1107000" />
+      <workItem from="1614857799056" duration="1337000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -230,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614849092341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update dependency">
+      <created>1614859024703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614859024703</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1614859058575</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614859058575</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +265,9 @@
     </ignored-roots>
     <MESSAGE value="reGit" />
     <MESSAGE value="update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README" />
+    <MESSAGE value="update dependency" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614858814283">
@@ -270,10 +282,10 @@
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614849093229">
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859060051">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614849093229" />
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859060051" />
     <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
