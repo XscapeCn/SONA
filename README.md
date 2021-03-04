@@ -1,8 +1,6 @@
 # Co-Expression 👨‍🌾 👩‍🌾
 
-## Datasets
-
-
+**J**oint **N**etwork **A**nalysis **W**heat
 
 
 
