@@ -10,14 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="reGit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/guava_23_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/guava-23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JNW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JNW.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src" beforeDir="false" afterPath="$PROJECT_DIR$/src" afterDir="false" />
-    </list>
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="reGit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +171,7 @@
       <workItem from="1605227884255" duration="16565000" />
       <workItem from="1605489997698" duration="1926000" />
       <workItem from="1614581032261" duration="46000" />
-      <workItem from="1614845788871" duration="1066000" />
+      <workItem from="1614845788871" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -187,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614845815673</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reGit">
+      <created>1614846888901</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614846888901</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,10 +222,10 @@
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614846859279" />
-    <state x="617" y="275" key="Vcs.Push.Dialog.v2" timestamp="1614845835886">
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614847098926">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="617" y="275" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614845835886" />
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614847098926" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
