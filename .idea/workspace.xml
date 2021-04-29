@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,8 +14,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FineMapping/Method02Overlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FineMapping/Method02Overlap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FineMapping/Method1Overlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FineMapping/Method1Overlap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GWAS/GA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GWAS/GA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneFeature/Demo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneFeature/Demo01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneFeature/FStringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneFeature/FStringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneFeature/GeneFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo04GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo04GATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Demo05TKWTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo05TKWTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prioritization/NM/NetworkBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/NetworkBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo01Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo01Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo02Pattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo02Pattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo03Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo03Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo04Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo04Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo05FunctionPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo05FunctionPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo06FunctionR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo06FunctionR1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo07FunctionR1R2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo07FunctionR1R2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Demo08FunctionR1AllRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo08FunctionR1AllRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Fasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Fasta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/FindPos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/FindPos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QTL/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Cal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Cal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo01FileToArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo01FileToArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo02CorrCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo02CorrCal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo03WriteOneOnOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo03WriteOneOnOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo04OOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo04OOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo05Triads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo05Triads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo06GeneMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo06GeneMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo07OpenNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo07OpenNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo08ForMonet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo08ForMonet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo09TestFor2MethodsForPCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo09TestFor2MethodsForPCC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo10TestBufferSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo10TestBufferSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo11AllClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo11AllClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo12GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo12GATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo13Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo13Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Demo14TKW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Demo14TKW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/ExpressionMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/ExpressionMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/IOUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/IntervalUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/IntervalUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/SNPMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/SNPMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TriangularMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/TriangularMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/Write.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +93,11 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIGER" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -134,15 +184,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,6 +227,7 @@
       <workItem from="1614581032261" duration="46000" />
       <workItem from="1614845788871" duration="11556000" />
       <workItem from="1614857799056" duration="2191000" />
+      <workItem from="1619707699776" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -279,28 +328,6 @@
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614858814283">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614858814283" />
-    <state x="664" y="178" key="NewModule_or_Project.wizard" timestamp="1614858816872">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="664" y="178" key="NewModule_or_Project.wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858816872" />
-    <state x="505" y="135" key="SettingsEditor" timestamp="1614858900500">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859284862">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859284862" />
-    <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="434" y="135" key="new project wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858560854" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -316,11 +343,6 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="6" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Test/Demo07OpenNet.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
