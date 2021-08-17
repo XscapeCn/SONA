@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -13,29 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="add out to GitIgnore">
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Cal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Cal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo01FileToArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo01FileToArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo02CorrCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo02CorrCal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo03WriteOneOnOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo03WriteOneOnOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo04OOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo04OOP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo05Triads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo05Triads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo06GeneMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo06GeneMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo07OpenNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo07OpenNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo08ForMonet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo08ForMonet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo09TestFor2MethodsForPCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo09TestFor2MethodsForPCC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo10TestBufferSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo10TestBufferSpeed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo11AllClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo11AllClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo12GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo12GATest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo13Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo13Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Demo14TKW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo14TKW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/ExpressionMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/ExpressionMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/IntervalUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/IntervalUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/SNPMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/SNPMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/TriangularMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/TriangularMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Write.java" afterDir="false" />
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +44,10 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIGER" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -93,6 +69,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Demo06Select">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo04OOP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.Demo04OOP" />
       <module name="JNW" />
@@ -158,17 +147,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Demo06Select" />
@@ -201,7 +179,6 @@
       <workItem from="1614581032261" duration="46000" />
       <workItem from="1614845788871" duration="11556000" />
       <workItem from="1614857799056" duration="2191000" />
-      <workItem from="1619707699776" duration="522000" />
     </task>
     <task id="LOCAL-00001" summary="reGit">
       <created>1614845815673</created>
@@ -273,21 +250,7 @@
       <option name="project" value="LOCAL" />
       <updated>1614859283601</updated>
     </task>
-    <task id="LOCAL-00011" summary="maven refactor">
-      <created>1619707974625</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1619707974625</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add out to GitIgnore">
-      <created>1619708165544</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1619708165544</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,9 +277,29 @@
     <MESSAGE value="update README" />
     <MESSAGE value="update dependency" />
     <MESSAGE value="update" />
-    <MESSAGE value="maven refactor" />
-    <MESSAGE value="add out to GitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add out to GitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614858814283">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614858814283" />
+    <state x="664" y="178" key="NewModule_or_Project.wizard" timestamp="1614858816872">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="664" y="178" key="NewModule_or_Project.wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858816872" />
+    <state x="505" y="135" key="SettingsEditor" timestamp="1614858900500">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859284862">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859284862" />
+    <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="434" y="135" key="new project wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858560854" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -333,6 +316,11 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="6" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Test/Demo07OpenNet.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,4 +1,4 @@
-package Prioritization.NM;
+package main.java.Prioritization.NM;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
