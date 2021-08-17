@@ -1,6 +1,6 @@
 package QTL;
 
-import Test.IOUtils;
+import utils.IOUtils;
 import com.google.common.primitives.Ints;
 import java.io.BufferedWriter;
 import java.io.FileWriter;

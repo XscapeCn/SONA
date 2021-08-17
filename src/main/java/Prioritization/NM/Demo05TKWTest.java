@@ -1,6 +1,6 @@
-package main.java.Prioritization.NM;
+package Prioritization.NM;
 
-import Test.TriangularMatrix;
+import utils.TriangularMatrix;
 
 import java.io.*;
 import java.util.ArrayList;

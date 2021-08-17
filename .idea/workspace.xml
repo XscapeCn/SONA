@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,9 +13,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="update">
+    <list default="true" id="c563211d-da89-430e-9d40-5627e087b1fd" name="Default Changelist" comment="reGit">
+      <change afterPath="$PROJECT_DIR$/others/geneList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GeneDic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneFeature/GeneFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JNW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JNW.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GWAS/GA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GWAS/GA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneFeature/Demo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneFeature/Demo01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo04GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo04GATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo05TKWTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Demo05TKWTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prioritization/NM/NetworkBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prioritization/NM/NetworkBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo01Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo01Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo02Pattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo02Pattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo04Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo04Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo05FunctionPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo05FunctionPlus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo06FunctionR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo06FunctionR1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo07FunctionR1R2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo07FunctionR1R2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Demo08FunctionR1AllRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Demo08FunctionR1AllRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QTL/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QTL/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo02CorrCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo02CorrCal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo04OOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo04OOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo05Triads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo05Triads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo06GeneMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo06GeneMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo08ForMonet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo08ForMonet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo09TestFor2MethodsForPCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo09TestFor2MethodsForPCC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo10TestBufferSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo10TestBufferSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo11AllClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo11AllClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo12GATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo12GATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Demo14TKW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Demo14TKW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/ExpressionMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ExpressionMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/IOUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/IntervalUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/IntervalUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/SNPMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SNPMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/TriangularMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TriangularMatrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +79,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -47,20 +87,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIGER" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/others" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="str" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Nature\2020PreExperiment\JNW\others" />
       <recent name="H:\Nature\2020PreExperiment\JNW" />
       <recent name="D:\Documents\DataScientist\850 samples of wheat\JNW" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="str" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Nature\2020PreExperiment\JNW\" />
@@ -68,7 +110,7 @@
       <recent name="D:\Documents\DataScientist\850 samples of wheat\JNW" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo06Select">
+  <component name="RunManager" selected="Application.GeneDic">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -82,25 +124,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo04OOP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.Demo04OOP" />
-      <module name="JNW" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Demo05Triads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.Demo05Triads" />
       <module name="JNW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +142,7 @@
       <module name="JNW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,7 +155,7 @@
       <module name="JNW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,13 +176,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GeneDic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GeneDic" />
+      <module name="JNW" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GeneDic" />
         <item itemvalue="Application.Demo06Select" />
         <item itemvalue="Application.Demo07OpenNet" />
         <item itemvalue="Application.Demo05Triads" />
         <item itemvalue="Application.GA" />
-        <item itemvalue="Application.Demo04OOP" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614859283601</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="reGit">
+      <created>1629180395106</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629180395106</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,33 +316,11 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src" />
     </ignored-roots>
-    <MESSAGE value="reGit" />
     <MESSAGE value="update README" />
     <MESSAGE value="update dependency" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="701" y="301" key="FileChooserDialogImpl" timestamp="1614858814283">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="701" y="301" key="FileChooserDialogImpl/0.0.2048.1122@0.0.2048.1122" timestamp="1614858814283" />
-    <state x="664" y="178" key="NewModule_or_Project.wizard" timestamp="1614858816872">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="664" y="178" key="NewModule_or_Project.wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858816872" />
-    <state x="505" y="135" key="SettingsEditor" timestamp="1614858900500">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="505" y="135" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1614858900500" />
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2" timestamp="1614859284862">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="535" y="298" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1614859284862" />
-    <state x="434" y="135" key="new project wizard" timestamp="1614858560854">
-      <screen x="0" y="0" width="2048" height="1122" />
-    </state>
-    <state x="434" y="135" key="new project wizard/0.0.2048.1122@0.0.2048.1122" timestamp="1614858560854" />
+    <MESSAGE value="reGit" />
+    <option name="LAST_COMMIT_MESSAGE" value="reGit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -317,7 +338,7 @@
           <option name="timeStamp" value="6" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Test/Demo07OpenNet.java</url>
+          <url>file://$PROJECT_DIR$/src/test/Demo07OpenNet.java</url>
           <line>4</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>

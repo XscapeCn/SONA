@@ -1,5 +1,7 @@
 package Test;
 
+import utils.ExpressionMatrix;
+
 import java.io.IOException;
 
 public class Demo04OOP {

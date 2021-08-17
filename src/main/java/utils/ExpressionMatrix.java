@@ -1,4 +1,4 @@
-package Test;
+package utils;
 
 import org.apache.commons.math3.exception.DimensionMismatchException;
 import org.apache.commons.math3.exception.MathIllegalArgumentException;

@@ -1,4 +1,4 @@
-package main.java.Prioritization.NM;
+package Prioritization.NM;
 
 import java.util.ArrayList;
 

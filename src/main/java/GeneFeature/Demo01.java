@@ -1,7 +1,7 @@
 package GeneFeature;
 
 //import xujun.analysis.rnaseq.GeneFeature;
-import Test.SNPMapping;
+import utils.SNPMapping;
 
 import java.util.ArrayList;
 import java.util.Arrays;

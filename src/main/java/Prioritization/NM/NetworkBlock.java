@@ -1,6 +1,6 @@
-package main.java.Prioritization.NM;
+package Prioritization.NM;
 
-import Test.ExpressionMatrix;
+import utils.ExpressionMatrix;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

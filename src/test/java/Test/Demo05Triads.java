@@ -1,5 +1,7 @@
 package Test;
 
+import utils.TriangularMatrix;
+
 import java.io.IOException;
 
 public class Demo05Triads {

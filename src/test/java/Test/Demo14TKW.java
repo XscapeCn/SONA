@@ -1,5 +1,7 @@
 package Test;
 
+import utils.SNPMapping;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
