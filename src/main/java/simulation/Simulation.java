@@ -1,4 +1,4 @@
-package QTL;
+package simulation;
 
 import com.google.common.primitives.Ints;
 import utils.IOUtils;
@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static QTL.FindPos.readRange;
+import static simulation.FindPos.readRange;
 
 public class Simulation {
     public static void main(String[] args) throws IOException {
@@ -222,29 +222,6 @@ public class Simulation {
             bwb.newLine();
         }
         bwb.close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //        BufferedWriter br = new BufferedWriter(new FileWriter("H:/Nature/2020PreExperiment/result/QTL/20210121/front_130.txt"));
 //        BufferedWriter brAsc = new BufferedWriter(new FileWriter("H:/Nature/2020PreExperiment/result/QTL/20210121/front_asc_130.txt"));

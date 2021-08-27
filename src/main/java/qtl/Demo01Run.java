@@ -1,126 +1,84 @@
-package QTL;
+package qtl;
 
-import com.google.common.primitives.Ints;
+import simulation.Fasta;
+import simulation.FindPos;
 import utils.IOUtils;
-
+import com.google.common.primitives.Ints;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static QTL.FindPos.readRange;
+import static simulation.FindPos.readRange;
 
-public class Demo08FunctionR1AllRandom {
+public class Demo01Run {
     public static void main(String[] args) throws IOException {
         Fasta ft = new Fasta();
         FindPos fp = new FindPos();
         ft.setBlocks("H:/Nature/2020PreExperiment/result/QTL/IWGSC_v1.1_HC_20170706_transcripts.fasta");
         ft.filter();
 
-//        BufferedReader br = new BufferedReader(new FileReader("H:/Nature/2020PreExperiment/result/QTL/20210127/para1-6-para2-6_information.txt"));
-//        int[] slice = new int[10000];
-//        br.readLine();
-//        String str;
-//        int index = 0;
-//        while((str = br.readLine()) != null){
-//            String temp = str.split("\t")[0];
-//            slice[index] = Integer.valueOf(temp);
-//            index++;
-////            System.out.println(slice[index-1]);
-//        }
-//        br.close();
+        ArrayList<Double> sds = new ArrayList<>();
+        sds.add(1.0);
+        sds.add(1.5);
+        sds.add(2.0);
+        sds.add(2.5);
+        sds.add(3.0);
+        sds.add(3.5);
+        sds.add(4.0);
+
+        ArrayList<Integer>  avrs = new ArrayList<>();
+
+        avrs.add(27);
+        avrs.add(28);
+        avrs.add(29);
+        avrs.add(30);
+        avrs.add(31);
+        avrs.add(32);
+        avrs.add(33);
 
 
-
-        ArrayList<double[]> para1 = new ArrayList<>();
-//        para1.add(new double[]{0.0003089255537614363, -0.09288985502782533,37.03678576404285});
-//        para1.add(new double[]{0.0002077099735215275, -0.08364862989041287,36.97704520344682});
-//        para1.add(new double[]{0.0003095285879928645, -0.10504501709159565,36.9461850090580});
-//        para1.add(new double[]{0.0003086982841662942, -0.10892741347511262,36.745600702976105});
-//        para1.add(new double[]{0.0004127805405222001, -0.13471416997303176,37.02530836576626});
-//        para1.add(new double[]{0.00031156496028229125,-0.1254729448356193 ,36.96556780517023});
-
-        for (int i = 1; i < 38; i++) {
-            double a = -(i/Math.pow(149,2));
-            double b = -1;
-            double c = 37;
-            para1.add(new double[]{a,b,c});
-        }
-
-        for (int i = 0; i < 10; i++) {
-            int[] slice = Fasta.randomCommon(0,ft.getFilterBlock().size(),10000);
-            ArrayList<Integer> startPos = Fasta.getRandomStartPos(ft.getFilterBlock());
-            for (int j = 0; j < para1.size(); j++) {
-                writeSimulationFile(fp, ft, para1.get(j), j, i, slice, startPos);
+        for (int i = 0; i < avrs.size(); i++) {
+            for (int j = 0; j < sds.size(); j++) {
+                writeSimulationFile(avrs.get(i), sds.get(j), fp, ft);
             }
         }
-
     }
 
-    public static  void writeSimulationFile(FindPos fp, Fasta ft, double[] para, int aa, int iii, int[] slice, ArrayList<Integer> startPos) throws IOException {
-//        ArrayList<Integer> startPos = Fasta.getRandomStartPos(ft.getFilterBlock());
+    public static  void writeSimulationFile(int avr, double sd, FindPos fp, Fasta ft) throws IOException {
+        ArrayList<Integer> startPos = Fasta.getRandomStartPos(ft.getFilterBlock());
         String[] ATCG = new String[]{"A", "T", "C", "G"};
         ArrayList<String> random350 = Fasta.randomSequences(ft.getFilterBlock(), startPos);
 
-//        int[] slice = Fasta.randomCommon(0,ft.getFilterBlock().size(),10000);
+        int[] slice = Fasta.randomCommon(0,ft.getFilterBlock().size(),10000);
         ArrayList<String> resName = new ArrayList<>();
         ArrayList<String> resSequence = new ArrayList<>();
         ArrayList<String> resSequenceNotMutation = new ArrayList<>();
-
+//        System.out.println(Arrays.toString(slice));
         ArrayList<ArrayList<Double>> pp = new ArrayList<>();
         ArrayList<String> asc = new ArrayList<>();
         int end = 150;
-        String filePath = "H:/Nature/2020PreExperiment/result/QTL/20210222/";
-        filePath = filePath + iii + "/";
-        File file=new File(filePath);
-        file.mkdirs();
+        String filePath = "H:/Nature/2020PreExperiment/result/QTL/20210122/";
 
 
         StringBuilder sbf = new StringBuilder();
         sbf.append(filePath);
-        sbf.append("para1-");
-        sbf.append(aa+1);
-//        sbf.append("-para2-");
-//        sbf.append(bb+1);
+        sbf.append("avr");
+        sbf.append(avr);
+        sbf.append("-sd");
+        sbf.append(sd);
 //        String fileName1 = sbf.append("_front.fastq").toString();
-//        String fileName1 = sbf.toString() + "_R1.fq.gz";
+        String fileName1 = sbf.toString() + "_R1.fq.gz";
         String information = sbf.toString() + "_information.txt";
         String fileName2 = sbf.toString() + "_R2.fq.gz";
 
-//        ArrayList<Double> temp1 = new ArrayList<>();
-//        for (int j = 1; j < 151; j++) {
-//            double num = getRandomFromSD(getQuadratic(para, j), sds.get(j-1));
-//            System.out.println("=========");
-//            System.out.println(num);
-//            System.out.println(getQuadratic(para,j));
-//            temp1.add(num);
-//        }
-//        for (int j = 0; j < 50; j++) {
-//            temp1.add(40.0);
-//        }
-//        for (int j = 151; j > 1; j--) {
-//            temp1.add(getQuadratic(para2, j));
-//        }
-
         ArrayList<ArrayList<Double>> Q = new ArrayList<>();
         for (int i = 0; i < slice.length; i++) {
-            ArrayList<Double> temp1 = new ArrayList<>();
-            for (int j = 0; j < 200; j++) {
-
-                ///
-//                double num = getQuadratic(para, j, 1);
-                ///
-
-//                System.out.println(getQuadratic(para,j, i));
-                temp1.add(40.0);
+            ArrayList<Double> temp = new ArrayList<>();
+            for (int j = 0; j < 350; j++) {
+                temp.add(Fasta.NormalDistribution(avr, sd));
             }
-            for (int j = 150; j > 0; j--) {
-                double num = getQuadratic(para, j,1);
-                temp1.add(num);
-            }
-
-            Q.add(temp1);
+            Q.add(temp);
         }
 
         for (int i = 0; i < Q.size(); i++) {
@@ -141,9 +99,8 @@ public class Demo08FunctionR1AllRandom {
             String tempStr = Fasta.random(random350.get(num), pp.get(Ints.indexOf(slice, num)));
             resSequence.add(tempStr);
         }
-
-
-
+        System.out.println(resSequenceNotMutation.get(0));
+        System.out.println(resSequence.get(0));
 //        for (int i = 0; i < pp.size(); i++) {
 //            StringBuilder sb = new StringBuilder();
 //            for (int j = 0; j < pp.get(i).size(); j++) {
@@ -175,36 +132,37 @@ public class Demo08FunctionR1AllRandom {
                 }
 //                sb.append(fp.transferACS(Q.get(i).get(j)));
 //                System.out.println(fp.transferACS(Q.get(i).get(j)));
+
             }
             asc.add(sb.toString());
         }
 
 
 
-//        ArrayList<String> resForwardSequence = new ArrayList<>();
+        ArrayList<String> resForwardSequence = new ArrayList<>();
         ArrayList<String> resBackSequence = new ArrayList<>();
-//        ArrayList<String> ascForwardSequence = new ArrayList<>();
+        ArrayList<String> ascForwardSequence = new ArrayList<>();
         ArrayList<String> ascBackSequence = new ArrayList<>();
         for (String seq : resSequence) {
             String forward = (String) seq.subSequence(0, end);
             //to upper
-//            StringBuilder sb1 = new StringBuilder();
-//            for (int i = 0; i < forward.length(); i++) {
-//                if (forward.charAt(i) == 'a'){
-//                    sb1.append('A');
-//                }else if (forward.charAt(i) == 'g'){
-//                    sb1.append('G');
-//                }else if (forward.charAt(i) == 'c'){
-//                    sb1.append('C');
-//                }else if (forward.charAt(i) == 't'){
-//                    sb1.append('T');
-//                }else if(forward.charAt(i) == 'N'){
-//                    sb1.append(ATCG[(int) (ATCG.length * Math.random())]);
-//                }else {
-//                    sb1.append(forward.charAt(i));
-//                }
-//            }
-//            resForwardSequence.add(sb1.toString());
+            StringBuilder sb1 = new StringBuilder();
+            for (int i = 0; i < forward.length(); i++) {
+                if (forward.charAt(i) == 'a'){
+                    sb1.append('A');
+                }else if (forward.charAt(i) == 'g'){
+                    sb1.append('G');
+                }else if (forward.charAt(i) == 'c'){
+                    sb1.append('C');
+                }else if (forward.charAt(i) == 't'){
+                    sb1.append('T');
+                }else if(forward.charAt(i) == 'N'){
+                    sb1.append(ATCG[(int) (ATCG.length * Math.random())]);
+                }else {
+                    sb1.append(forward.charAt(i));
+                }
+            }
+            resForwardSequence.add(sb1.toString());
             StringBuilder sb = new StringBuilder();
             seq = seq.toUpperCase();
             for (int i =  seq.length()-1; i > (seq.length()-151); i--) {
@@ -245,9 +203,10 @@ public class Demo08FunctionR1AllRandom {
             resBackSequence.add(sb.toString());
         }
         for (String seq:asc) {
-//            ascForwardSequence.add((String) seq.subSequence(0, end));
+            ascForwardSequence.add((String) seq.subSequence(0, end));
             StringBuilder sb = new StringBuilder();
             for (int i = seq.length()-1; i > seq.length()-151; i--) {
+
                 sb.append(seq.charAt(i));
             }
             ascBackSequence.add(sb.toString());
@@ -273,19 +232,18 @@ public class Demo08FunctionR1AllRandom {
         br3.close();
 
 //        BufferedWriter bwf = new BufferedWriter(new FileWriter(fileName1));
-
-//        BufferedWriter bwf = IOUtils.getTextGzipWriter(fileName1);
-//        for (int i = 0; i < resForwardSequence.size(); i++) {
-//            bwf.write("@" + i + " 1:");
-//            bwf.write("\n");
-//            bwf.write(resForwardSequence.get(i));
-//            bwf.write("\n");
-//            bwf.write("+");
-//            bwf.write("\n");
-//            bwf.write(ascForwardSequence.get(i));
-//            bwf.write("\n");
-//        }
-//        bwf.close();
+        BufferedWriter bwf = IOUtils.getTextGzipWriter(fileName1);
+        for (int i = 0; i < resForwardSequence.size(); i++) {
+            bwf.write("@" + i + " 1:");
+            bwf.write("\n");
+            bwf.write(resForwardSequence.get(i));
+            bwf.write("\n");
+            bwf.write("+");
+            bwf.write("\n");
+            bwf.write(ascForwardSequence.get(i));
+            bwf.write("\n");
+        }
+        bwf.close();
 
 //        BufferedWriter bwb = new BufferedWriter(new FileWriter(fileName2));
         BufferedWriter bwb = IOUtils.getTextGzipWriter(fileName2);
@@ -301,31 +259,4 @@ public class Demo08FunctionR1AllRandom {
         }
         bwb.close();
     }
-
-    public static double getQuadratic(double[] a, double x){
-        return a[0]*x*x + a[1]*x + a[2];
-//        return a*x*x + b*x + c;
-    }
-
-    public static double getQuadratic(double[] a, double x, int i){
-        return a[0]*(x+a[1])*(x+a[1]) + a[2];
-//        return a[0]*x*x + a[1]*x + a[2];
-//        return a*x*x + b*x + c;
-    }
-
-    public static double getRandomFromSD(double avr, double sd){
-        if (sd == 0){
-            return avr;
-        }else {
-            double temp;
-            double max = avr + sd;
-            double min = avr -sd;
-            if (max > 40){
-                max = 40;
-            }
-            temp = (Math.random() * (max - min)) + min;
-            return temp;
-        }
-    }
-
 }

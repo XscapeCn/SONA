@@ -1,4 +1,4 @@
-package GeneFeature;
+package geneFeature;
 
 import com.google.common.base.Splitter;
 import java.util.ArrayList;

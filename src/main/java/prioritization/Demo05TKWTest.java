@@ -1,4 +1,4 @@
-package Prioritization.NM;
+package prioritization;
 
 import utils.TriangularMatrix;
 

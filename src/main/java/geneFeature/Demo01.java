@@ -1,4 +1,4 @@
-package GeneFeature;
+package geneFeature;
 
 //import xujun.analysis.rnaseq.GeneFeature;
 import utils.SNPMapping;

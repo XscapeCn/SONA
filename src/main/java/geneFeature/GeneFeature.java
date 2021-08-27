@@ -1,11 +1,10 @@
-package GeneFeature;
+package geneFeature;
 
 import pgl.infra.dna.FastaByte;
 import pgl.infra.dna.SequenceByte;
 import pgl.infra.pos.ChrPos;
 import pgl.infra.range.Range;
 import pgl.infra.utils.IOUtils;
-import GeneFeature.FStringUtils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,4 +1,6 @@
-package QTL;
+package qtl;
+
+import simulation.FindPos;
 
 import java.util.ArrayList;
 

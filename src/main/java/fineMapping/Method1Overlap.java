@@ -1,4 +1,4 @@
-package FineMapping;
+package fineMapping;
 
 import java.io.*;
 import java.util.ArrayList;

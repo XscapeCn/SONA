@@ -1,12 +1,14 @@
-package QTL;
+package qtl;
 
 import com.google.common.primitives.Ints;
+import simulation.Fasta;
+import simulation.FindPos;
 import utils.IOUtils;
 
 import java.io.*;
 import java.util.ArrayList;
 
-import static QTL.FindPos.readRange;
+import static simulation.FindPos.readRange;
 
 public class Demo07FunctionR1R2 {
     public static void main(String[] args) throws IOException {

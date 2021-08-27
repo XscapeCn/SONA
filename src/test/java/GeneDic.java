@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class GeneDic {
-    public HashMap<Integer,String> geneList = new HashMap<>();
+    private HashMap<Integer,String> geneList = new HashMap<>();
 
     public GeneDic(){
         try{
@@ -22,9 +22,13 @@ public class GeneDic {
         }
     }
 
+    public HashMap<Integer, String> getGeneList() {
+        return geneList;
+    }
+
     public static void main(String[] args) {
 //        GeneDic gd = new GeneDic();
-        HashMap<Integer, String> geneList = new GeneDic().geneList;
+        HashMap<Integer, String> geneList = new GeneDic().getGeneList();
         System.out.println(geneList.get(12));
     }
 }

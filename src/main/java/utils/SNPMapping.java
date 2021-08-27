@@ -1,6 +1,6 @@
 package utils;
 
-import GeneFeature.GeneFeature;
+import geneFeature.GeneFeature;
 
 import java.io.*;
 import java.net.HttpURLConnection;
