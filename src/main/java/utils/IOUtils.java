@@ -5,6 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -253,5 +255,37 @@ public class IOUtils {
             else fileTree.addAll(getRecursiveFiles(entry));
         }
         return fileTree;
+    }
+
+    public static List<String> getTextContent (String infileS) {
+        BufferedReader br = getTextReader(infileS);
+        List<String> res = new ArrayList<>();
+        String str;
+        try {
+            while( (str = br.readLine() ) != null ){
+                res.add(str);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    public static List<List<String>> getTextContent (String infileS, String regex) {
+        BufferedReader br = getTextReader(infileS);
+        List<List<String>> res = new ArrayList<>();
+        String str;
+        try {
+            while( (str = br.readLine() ) != null ){
+                String[] split = str.split(regex);
+                List<String> temp = new ArrayList<>(Arrays.asList(split));
+                res.add(temp);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return res;
     }
 }

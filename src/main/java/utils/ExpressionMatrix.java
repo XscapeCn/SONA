@@ -8,12 +8,18 @@ import org.apache.commons.math3.stat.regression.SimpleRegression;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 //import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 
 public class ExpressionMatrix{
+    private int stage;
+    private String tissue;
     private String filename;
-    private ArrayList<ArrayList<Double>> expression;
+    private List<String> sample;
+    private List<String> geneName;
+    private List<Integer> gene;
+    private List<List<Double>> expression;
 
     public ExpressionMatrix(String filename) throws IOException {
         this.filename = filename;
@@ -32,7 +38,7 @@ public class ExpressionMatrix{
         return filename;
     }
 
-    public ArrayList<ArrayList<Double>> getExpression() {
+    public List<List<Double>> getExpression() {
         return expression;
     }
 
@@ -183,7 +189,7 @@ public class ExpressionMatrix{
         }
         br1.close();
         bw.close();
-        return ;
+//        return ;
     }
 
     public double[][] getCorrMatrix(String writeFileName, int geneCount) throws IOException {
@@ -274,7 +280,7 @@ public class ExpressionMatrix{
         // correlation is just a normalized covariation
         return cov / sigmaX / sigmaY;
     }
-    public static double myCorrelation(ArrayList<Double> xs, ArrayList<Double> ys) {
+    public static double myCorrelation(List<Double> xs, List<Double> ys) {
         //TODO: check here that arrays are not null, of the same length etc
         double sx = 0.0;
         double sy = 0.0;

@@ -99,13 +99,10 @@ public class Simulation {
             for (int j = 0; j < resSequence.get(i).length(); j++) {
                 sb.append(fp.transferACS(Q.get(i).get(j)));
 //                System.out.println(fp.transferACS(Q.get(i).get(j)));
-
             }
             asc.add(sb.toString());
         }
-
-
-
+        
         ArrayList<String> resForwardSequence = new ArrayList<>();
         ArrayList<String> resBackSequence = new ArrayList<>();
         ArrayList<String> ascForwardSequence = new ArrayList<>();
