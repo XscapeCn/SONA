@@ -1,6 +1,6 @@
 package Test;
 
-import utils.ExpressionMatrix;
+import sona.ExpressionMatrix;
 
 import java.io.IOException;
 

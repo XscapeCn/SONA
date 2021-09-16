@@ -1,6 +1,9 @@
 package Test;
 
-import utils.ExpressionMatrix;
+import sona.ExpressionMatrix;
+import utils.MathUtils;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 public class Demo09TestFor2MethodsForPCC {
     public static void main(String[] args) {
@@ -10,7 +13,7 @@ public class Demo09TestFor2MethodsForPCC {
         long startTime=System.currentTimeMillis();
         double res = 0;
         for (int i = 0; i < 800000000; i++) {
-            res = ExpressionMatrix.correlation(aa,bb);
+            res = MathUtils.correlation(aa,bb);
         }
         long endTime=System.currentTimeMillis(); //获取结束时间
         System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
@@ -18,7 +21,7 @@ public class Demo09TestFor2MethodsForPCC {
         System.out.println("=======================");
         long startTime2=System.currentTimeMillis();
         double res2 = 0;
-        for (int i = 0; i <  800000000; i++) { res2 = ExpressionMatrix.myCorrelation(aa,bb);
+        for (int i = 0; i <  800000000; i++) { res2 = MathUtils.myCorrelation(aa,bb);
         }
         long endTime2=System.currentTimeMillis(); //获取结束时间
         System.out.println("程序运行时间： "+(endTime2-startTime2)+"ms");

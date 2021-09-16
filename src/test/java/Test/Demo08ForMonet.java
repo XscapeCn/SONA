@@ -1,6 +1,6 @@
 package Test;
 
-import utils.TriangularMatrix;
+import sona.TriangularMatrix;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package utils;
+package sona;
 
 public class AdjacencyMatrix {
 }

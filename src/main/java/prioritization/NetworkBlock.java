@@ -1,6 +1,7 @@
 package prioritization;
 
-import utils.ExpressionMatrix;
+import sona.ExpressionMatrix;
+import utils.MathUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class NetworkBlock {
         ArrayList<Double> result = new ArrayList<>();
         for (int i = 0; i < candidateExpression.size(); i++) {
             for (int j = i +1; j < candidateExpression.size(); j++) {
-                double temp = ExpressionMatrix.correlation(candidateExpression.get(i), candidateExpression.get(j));
+                double temp = MathUtils.correlation(candidateExpression.get(i), candidateExpression.get(j));
                 if (temp>0.2 | temp<-0.2){
                     result.add(temp);
                 }
@@ -75,7 +76,7 @@ public class NetworkBlock {
         ArrayList<Double> result = new ArrayList<>();
         for (int i = 0; i < candidateExpression.length; i++) {
             for (int j = i +1; j < candidateExpression.length; j++) {
-                double temp = ExpressionMatrix.correlation(candidateExpression[i], candidateExpression[j]);
+                double temp = MathUtils.correlation(candidateExpression[i], candidateExpression[j]);
                 if (temp>0.2 | temp<-0.2){
                     result.add(temp);
                 }

@@ -1,8 +1,8 @@
 package GWAS;
 
 
-import utils.ExpressionMatrix;
-import utils.TriangularMatrix;
+import sona.ExpressionMatrix;
+import sona.TriangularMatrix;
 
 import java.io.IOException;
 

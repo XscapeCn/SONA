@@ -5,6 +5,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TransGeneToNum {
+    private List<String> gene = new ArrayList<>();
+
+
+    public TransGeneToNum(){
+        BufferedReader br = IOUtils.getTextReader("D:/Desktop/ScriptsInNetwork/Data/geneList.txt");
+//        BufferedReader br = IOUtils.getTextReader("/data1/home/songxu/task/WGCNA/Data/Expression/geneList.txt");
+        try{
+            String str;
+            while ((str = br.readLine()) != null) {
+                gene.add(str);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+
+    public int getIndexOfGene(String geneName){
+        return gene.indexOf(geneName);
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("D:/Desktop/geneList.txt"));
         List<String> gene = new ArrayList<>();

@@ -1,4 +1,4 @@
-package utils;
+package sona;
 
 import org.apache.commons.math3.exception.DimensionMismatchException;
 import org.apache.commons.math3.exception.MathIllegalArgumentException;
@@ -9,6 +9,10 @@ import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import utils.IOUtils;
+import utils.MathUtils;
+import utils.NetworkUtils;
+import utils.TransGeneToNum;
 
 //import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 
@@ -16,23 +20,21 @@ public class ExpressionMatrix{
     private int stage;
     private String tissue;
     private String filename;
-    private List<String> sample;
-    private List<String> geneName;
-    private List<Integer> gene;
+    private List<String> sample = new ArrayList<>();
+    private List<String> geneName = new ArrayList<>();
+    private List<Integer> gene = new ArrayList<>();
     private List<List<Double>> expression;
+    private String outPath = "";
+    private String[] outFile;
 
-    public ExpressionMatrix(String filename) throws IOException {
-        this.filename = filename;
-        this.expression = new ArrayList<>();
-        BufferedReader br1 = new BufferedReader(new FileReader(this.filename));
-        String str = null;
-        while ((str = br1.readLine()) != null) {
-            ArrayList<Double> temp = TriangularMatrix.getDrrA(str);
-            this.expression.add(temp);
-        }
+
+    public ExpressionMatrix(String filename){
+        initialize(filename);
     }
-
-//    public ExpressionMatrix() {}
+    public ExpressionMatrix(String filename, String outPath){
+        initialize(filename);
+        this.outPath = outPath;
+    }
 
     public String getFilename() {
         return filename;
@@ -41,6 +43,147 @@ public class ExpressionMatrix{
     public List<List<Double>> getExpression() {
         return expression;
     }
+
+    public String getTissue() {
+        return tissue;
+    }
+
+    public List<String> getSample() {
+        return sample;
+    }
+
+    public List<String> getGeneName() {
+        return geneName;
+    }
+
+    public List<Integer> getGene() {
+        return gene;
+    }
+
+    public String getOutPath() {
+        return outPath;
+    }
+
+    public void setOutPath(String outPath) {
+        this.outPath = outPath;
+    }
+
+    public int getStage() {
+        return stage;
+    }
+
+    public String[] getOutFile(){return outFile;};
+
+    //    public ExpressionMatrix() {}
+    public void initialize(String filename){
+        this.filename = filename;
+        this.expression = new ArrayList<>();
+        this.outFile = NetworkUtils.getContextFromName(filename);
+//        this.stage = Integer.parseInt(filename.substring(1,3));
+//        this.tissue = filename.split(".txt")[1].substring(1);
+        BufferedReader br = IOUtils.getTextReader(this.filename);
+        TransGeneToNum tg = new TransGeneToNum();
+        try {
+            String str = null;
+            str = br.readLine();
+            System.out.println(str);
+            readSample(str);
+            while ((str = br.readLine()) != null) {
+//                System.out.println(str);
+                String[] split = str.split("\t");
+//                System.out.println(str);
+                geneName.add(split[3]);
+                gene.add(tg.getIndexOfGene(split[3]));
+                List<Double> temp = new ArrayList<>();
+                for (int i = 4; i < split.length; i++) {
+                    temp.add(Double.parseDouble(split[i]));
+                }
+                this.expression.add(temp);
+            }
+            br.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+    }
+
+    public void readSample(String str){
+        String[] splits = str.split("\t");
+        for (int i = 4; i < splits.length; i++) {
+            sample.add(splits[i]);
+        }
+    }
+
+    public void write(String writeFileName){
+        String file = this.outPath + writeFileName;
+        BufferedWriter bw = IOUtils.getTextWriter(file);
+
+        DecimalFormat formatDouble = new DecimalFormat("#.####");
+        try{
+            bw.write("StartID,EndID,Corr \n");
+            for (int i = 0; i < expression.size(); i++) {
+                for (int j = 0; j < i; j++) {
+                    double correlation = MathUtils.correlation(expression.get(i), expression.get(j));
+                    bw.write(formatDouble.format(correlation) + ",");
+                }
+                bw.write("\n");
+            }
+            bw.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+
+    public void writeNeoFile(){
+        writeNodeFile();
+        writeRelateFile();
+
+    }
+
+    public void writeNodeFile(){
+        String file = this.outPath + outFile[0];
+        BufferedWriter bw = IOUtils.getTextWriter(file);
+//        DecimalFormat formatDouble = new DecimalFormat("#.####");
+        try{
+            bw.write(":LABEL,geneID,geneIn:ID\n");
+            for (int i = 0; i < geneName.size(); i++) {
+                bw.write("gene,"+geneName.get(i) + "," + gene.get(i)+ "\n");
+            }
+            bw.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+    }
+
+    public void writeRelateFile(){
+        String file = this.outPath + outFile[1];
+        BufferedWriter bw = IOUtils.getTextWriter(file);
+        DecimalFormat formatDouble = new DecimalFormat("#.####");
+        try{
+            bw.write(":TYPE,:Start_ID,:End_ID,Corr\n");
+            for (int i = 0; i < expression.size(); i++) {
+                for (int j = 0; j < i; j++) {
+//                    double correlation = MathUtils.correlation(expression.get(i), expression.get(j));
+                    double correlation = MathUtils.myCorrelation(expression.get(i), expression.get(j));
+//                    double correlation = Math.random();
+                    if (Math.abs(correlation) > 0.5){
+                        bw.write("t," + gene.get(i)+","+gene.get(j)+",");
+                        bw.write(formatDouble.format(correlation));
+                        bw.write("\n");
+                    }
+                }
+            }
+            bw.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+
 
     //write triangular correlation matrix
     public void writeCorrMatrix(String writeFileName) throws IOException {
@@ -55,7 +198,7 @@ public class ExpressionMatrix{
             double[] temp = new double[count-1];
             for (int count2 = 0; count2 < count-1; count2++) {
                 str2 = br2.readLine();
-                temp[count2] = correlation(drr, TriangularMatrix.getDrr(str2));
+                temp[count2] = MathUtils.correlation(drr, TriangularMatrix.getDrr(str2));
             }
             DecimalFormat formatDouble = new DecimalFormat("#.####");
             for (double v : temp) {
@@ -67,7 +210,7 @@ public class ExpressionMatrix{
         }
         br1.close();
         bw.close();
-        return ;
+//        return ;
     }
 
     public void writeCorrMatrixA(String writeFileName) throws IOException {
@@ -77,7 +220,7 @@ public class ExpressionMatrix{
         for (int i = 1; i < this.expression.size(); i++) {
             StringBuilder sb = new StringBuilder();
             for (int j = 0; j < i; j++) {
-                sb.append(formatDouble.format(myCorrelation(this.expression.get(j), this.expression.get(i))));
+                sb.append(formatDouble.format(MathUtils.myCorrelation(this.expression.get(j), this.expression.get(i))));
                 sb.append('\t');
             }
             bw.write(sb.toString());
@@ -89,11 +232,10 @@ public class ExpressionMatrix{
     public void writeCorrMatrixA() throws IOException {
         for (int i = 1; i < this.expression.size(); i++) {
             for (int j = 0; j < i; j++) {
-                myCorrelation(this.expression.get(j), this.expression.get(i));
+                MathUtils.myCorrelation(this.expression.get(j), this.expression.get(i));
             }
         }
     }
-
     //correlation matrix between 2 files
     public void writeCorrMatrix(String writeFileName, String secondExpressionFilename) throws IOException {
         BufferedReader br1 = new BufferedReader(new FileReader(this.filename));
@@ -107,7 +249,7 @@ public class ExpressionMatrix{
             double[] temp = new double[count-1];
             for (int count2 = 0; count2 < count-1; count2++) {
                 str2 = br2.readLine();
-                temp[count2] = correlation(drr, TriangularMatrix.getDrr(str2));
+                temp[count2] = MathUtils.correlation(drr, TriangularMatrix.getDrr(str2));
             }
             DecimalFormat formatDouble = new DecimalFormat("#.####");
             for (double v : temp) {
@@ -122,7 +264,6 @@ public class ExpressionMatrix{
         return ;
     }
 
-    //write full size correlation matrix
     public void writeCorrMatrix(String writeFileName, int size) throws IOException {
         BufferedReader br1 = new BufferedReader(new FileReader(this.filename));
         BufferedWriter bw = new BufferedWriter(new FileWriter(writeFileName));
@@ -135,7 +276,7 @@ public class ExpressionMatrix{
 //            double[] temp = new double[size];
             int count = 0;
             while ((str2 = br2.readLine()) != null){
-                temp.add(correlation(drr, TriangularMatrix.getDrr(str2)));
+                temp.add(MathUtils.correlation(drr, TriangularMatrix.getDrr(str2)));
 //                temp[count] = correlation(drr, TriangularMatrix.getDrr(str2));
                 count++;
             }
@@ -177,7 +318,7 @@ public class ExpressionMatrix{
             double[] temp = new double[size];
             int count = 0;
             while ((str2 = br2.readLine()) != null){
-                temp[count] = correlation(drr, TriangularMatrix.getDrr(str2));
+                temp[count] = MathUtils.correlation(drr, TriangularMatrix.getDrr(str2));
                 count++;
             }
             DecimalFormat formatDouble = new DecimalFormat("#.####");
@@ -206,7 +347,7 @@ public class ExpressionMatrix{
             double[] temp = new double[count-1];
             for (int count2 = 0; count2 < count-1; count2++) {
                 str2 = br2.readLine();
-                temp[count2] = correlation(drr, TriangularMatrix.getDrr(str2));
+                temp[count2] = MathUtils.correlation(drr, TriangularMatrix.getDrr(str2));
             }
             DecimalFormat formatDouble = new DecimalFormat("#.####");
             corrMatrix[count-1] = temp;
@@ -222,88 +363,4 @@ public class ExpressionMatrix{
         return corrMatrix;
     }
 
-    public static double correlation(final double[] xArray, final double[] yArray) {
-        SimpleRegression regression = new SimpleRegression();
-        if (xArray.length != yArray.length) {
-            throw new DimensionMismatchException(xArray.length, yArray.length);
-        } else if (xArray.length < 2) {
-            throw new MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_DIMENSION,
-                    xArray.length, 2);
-        } else {
-            for(int i=0; i<xArray.length; i++) {
-                regression.addData(xArray[i], yArray[i]);
-            }
-            return regression.getR();
-        }
-    }
-
-    public static double correlation(ArrayList<Double> xArray, ArrayList<Double> yArray) {
-        SimpleRegression regression = new SimpleRegression();
-        if (xArray.size() != yArray.size()) {
-            throw new DimensionMismatchException(xArray.size(), yArray.size());
-        } else if (xArray.size() < 2) {
-            throw new MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_DIMENSION,
-                    xArray.size(), 2);
-        } else {
-            for(int i=0; i<xArray.size(); i++) {
-                regression.addData(xArray.get(i), yArray.get(i));
-            }
-            return regression.getR();
-        }
-    }
-
-
-    //below is the PCC calculation method written by myself
-    public static double myCorrelation(double[] xs, double[] ys) {
-        //TODO: check here that arrays are not null, of the same length etc
-        double sx = 0.0;
-        double sy = 0.0;
-        double sxx = 0.0;
-        double syy = 0.0;
-        double sxy = 0.0;
-        int n = Math.min(xs.length, ys.length);
-        for(int i = 0; i < n; ++i) {
-            double x = xs[i];
-            double y = ys[i];
-            sx += x;
-            sy += y;
-            sxx += x * x;
-            syy += y * y;
-            sxy += x * y;
-        }
-        // covariation
-        double cov = sxy / n - sx * sy / n / n;
-        // standard error of x
-        double sigmaX = Math.sqrt(sxx / n -  sx * sx / n / n);
-        // standard error of y
-        double sigmaY = Math.sqrt(syy / n -  sy * sy / n / n);
-        // correlation is just a normalized covariation
-        return cov / sigmaX / sigmaY;
-    }
-    public static double myCorrelation(List<Double> xs, List<Double> ys) {
-        //TODO: check here that arrays are not null, of the same length etc
-        double sx = 0.0;
-        double sy = 0.0;
-        double sxx = 0.0;
-        double syy = 0.0;
-        double sxy = 0.0;
-        int n = Math.min(xs.size(), ys.size());
-        for(int i = 0; i < n; ++i) {
-            double x = xs.get(i);
-            double y = ys.get(i);
-            sx += x;
-            sy += y;
-            sxx += x * x;
-            syy += y * y;
-            sxy += x * y;
-        }
-        // covariation
-        double cov = sxy / n - sx * sy / n / n;
-        // standard error of x
-        double sigmaX = Math.sqrt(sxx / n -  sx * sx / n / n);
-        // standard error of y
-        double sigmaY = Math.sqrt(syy / n -  sy * sy / n / n);
-        // correlation is just a normalized covariation
-        return cov / sigmaX / sigmaY;
-    }
 }

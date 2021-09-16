@@ -1,6 +1,6 @@
 package prioritization;
 
-import utils.TriangularMatrix;
+import sona.TriangularMatrix;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
