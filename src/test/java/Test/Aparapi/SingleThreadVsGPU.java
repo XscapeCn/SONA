@@ -1,0 +1,98 @@
+package Test.Aparapi;
+
+import com.aparapi.Kernel;
+import com.aparapi.Range;
+
+public class SingleThreadVsGPU {
+
+    public static void main(String[] args) {
+
+        // Width of the matrix
+        final int SIZE = 2000;
+
+        // We should use linear arrays as supported by the API
+
+        final int[] a = new int[SIZE * SIZE];
+        final int[] b = new int[SIZE * SIZE];
+        int[] c = new int[SIZE * SIZE];
+        final int[] d = new int[SIZE * SIZE];
+        int val;
+
+        // Creating random matrices
+
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                a[i * SIZE + j] = (int) (Math.random() * 100);
+                b[i * SIZE + j] = (int) (Math.random() * 100);
+            }
+        }
+
+        long time = System.currentTimeMillis();
+
+        // CPU multiplication
+
+        System.out.println("Starting single threaded computation");
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                val = 0;
+                for (int k = 0; k < SIZE; k++) {
+                    val += a[i * SIZE + k] * b[k * SIZE + j];
+                }
+                c[i * SIZE + j] = val;
+            }
+        }
+
+        System.out.println("Task finished in " + (System.currentTimeMillis() - time) + "ms");
+
+        // Kernel for multiplication
+        int gene = 50000;
+        int sample = 300;
+        double[] e = new double[gene*gene];
+
+        Kernel kernel = new Kernel() {
+            @Override
+            public void run() {
+                int row = getGlobalId() / gene;
+                int col = getGlobalId() % sample;
+//                if (row > SIZE || col > SIZE) return;
+//                d[row * SIZE + col] = 0;
+                for (int j = 0; j < col; j++) {
+                    for (int i = 0; i < sample; i++) {
+                        d[row * gene + col] += a[row * gene + i] * b[i * gene + col];
+                    }
+                }
+            }
+        };
+
+        Kernel kernel2 = new Kernel() {
+            @Override
+            public void run() {
+                int row = getGlobalId() / SIZE;
+                int col = getGlobalId() % SIZE;
+                if (row > SIZE || col > SIZE) return;
+                d[row * SIZE + col] = 0;
+                for (int i = 0; i < SIZE; i++) {
+                    d[row * SIZE + col] += a[row * SIZE + i] * b[i * SIZE + col];
+                }
+            }
+        };
+
+        // Array size for GPU to know
+        Range range = Range.create(SIZE * SIZE);
+        System.out.println("Starting GPU computation");
+        time = System.currentTimeMillis();
+        kernel.execute(range); // Running the Kernel
+        System.out.println("Task finished in " + (System.currentTimeMillis() - time) + "ms");
+
+        // Verifying the result
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (c[i * SIZE + j] != d[i * SIZE + j]) {
+                    System.out.println("ERROR");
+                    return;
+                }
+            }
+        }
+    }
+}
+

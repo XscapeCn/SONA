@@ -184,6 +184,15 @@ public class ExpressionMatrix{
         }
     }
 
+    public void writeRelateFileInMultipleThread(int thread){
+
+
+
+
+
+
+    }
+
 
     //write triangular correlation matrix
     public void writeCorrMatrix(String writeFileName) throws IOException {
@@ -211,6 +220,38 @@ public class ExpressionMatrix{
         br1.close();
         bw.close();
 //        return ;
+    }
+
+    public void conCurrentCorrelation(int a, int b){
+        List<Double> res = new ArrayList<>();
+        for (int i = 0; i < b-a; i++) {
+
+            for (int j = 0; j < i; j++) {
+                double correlation = MathUtils.myCorrelation(expression.get(i+a), expression.get(j+a));
+                res.add(correlation);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        classify(100,10);
+    }
+
+    public static void  classify(int sum, int a){
+        int yu = sum%a;
+        int count = sum/a;
+        if (yu != 0){
+            for (int i = 1; i < count-1; i++) {
+//                String s = ((a * i) - 1) + " ";
+                System.out.println( a*(i-1) + " " + ((a*i)-1) + " ");
+            }
+            System.out.println(a*(count) + " " + sum + " ");
+        }else {
+            for (int i = 1; i < count+1; i++) {
+//                String s = ((a * i) - 1) + " ";
+                System.out.println( a*(i-1) + " " + ((a*i)-1) + " ");
+            }
+        }
     }
 
     public void writeCorrMatrixA(String writeFileName) throws IOException {
