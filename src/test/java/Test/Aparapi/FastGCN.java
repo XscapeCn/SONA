@@ -3,9 +3,9 @@ package Test.Aparapi;
 import com.aparapi.Kernel;
 import com.aparapi.Range;
 import sona.ExpressionMatrix;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class FastGCN {
     public static void main(String[] args) {
