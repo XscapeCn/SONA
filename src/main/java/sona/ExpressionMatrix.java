@@ -31,7 +31,13 @@ public class ExpressionMatrix{
     public ExpressionMatrix(String filename){
         initialize(filename);
     }
+
     public ExpressionMatrix(String filename, String outPath){
+        initialize(filename);
+        this.outPath = outPath;
+    }
+
+    public ExpressionMatrix(String filename, String outPath, int col){
         initialize(filename);
         this.outPath = outPath;
     }
@@ -41,7 +47,7 @@ public class ExpressionMatrix{
     }
 
     public List<List<Double>> getExpression() {
-        return expression;
+        return this.expression;
     }
 
     public String getTissue() {
@@ -159,6 +165,16 @@ public class ExpressionMatrix{
 
     }
 
+    public void calTest(){
+        for (int i = 0; i < expression.size(); i++) {
+            for (int j = 0; j < i; j++) {
+//                    double correlation = MathUtils.correlation(expression.get(i), expression.get(j));
+                double correlation = MathUtils.myCorrelation(expression.get(i), expression.get(j));
+//                    double correlation = Math.random();
+            }
+        }
+    }
+
     public void writeRelateFile(){
         String file = this.outPath + outFile[1];
         BufferedWriter bw = IOUtils.getTextWriter(file);
@@ -185,12 +201,6 @@ public class ExpressionMatrix{
     }
 
     public void writeRelateFileInMultipleThread(int thread){
-
-
-
-
-
-
     }
 
 

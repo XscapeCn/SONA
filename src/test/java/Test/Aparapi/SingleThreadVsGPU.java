@@ -8,7 +8,7 @@ public class SingleThreadVsGPU {
     public static void main(String[] args) {
 
         // Width of the matrix
-        final int SIZE = 2000;
+        final int SIZE = 4000;
 
         // We should use linear arrays as supported by the API
 
@@ -45,26 +45,10 @@ public class SingleThreadVsGPU {
         System.out.println("Task finished in " + (System.currentTimeMillis() - time) + "ms");
 
         // Kernel for multiplication
-        int gene = 50000;
-        int sample = 300;
-        double[] e = new double[gene*gene];
+
+        double[] e = new double[SIZE*SIZE];
 
         Kernel kernel = new Kernel() {
-            @Override
-            public void run() {
-                int row = getGlobalId() / gene;
-                int col = getGlobalId() % sample;
-//                if (row > SIZE || col > SIZE) return;
-//                d[row * SIZE + col] = 0;
-                for (int j = 0; j < col; j++) {
-                    for (int i = 0; i < sample; i++) {
-                        d[row * gene + col] += a[row * gene + i] * b[i * gene + col];
-                    }
-                }
-            }
-        };
-
-        Kernel kernel2 = new Kernel() {
             @Override
             public void run() {
                 int row = getGlobalId() / SIZE;
