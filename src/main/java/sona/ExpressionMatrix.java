@@ -50,6 +50,10 @@ public class ExpressionMatrix{
         return this.expression;
     }
 
+    public void setExpression(int a) {
+        this.expression = expression.subList(0,a);
+    }
+
     public String getTissue() {
         return tissue;
     }
@@ -92,7 +96,7 @@ public class ExpressionMatrix{
         try {
             String str = null;
             str = br.readLine();
-            System.out.println(str);
+//            System.out.println(str);
             readSample(str);
             while ((str = br.readLine()) != null) {
 //                System.out.println(str);
