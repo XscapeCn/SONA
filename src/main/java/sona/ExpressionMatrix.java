@@ -190,7 +190,7 @@ public class ExpressionMatrix{
 //                    double correlation = MathUtils.correlation(expression.get(i), expression.get(j));
                     double correlation = MathUtils.myCorrelation(expression.get(i), expression.get(j));
 //                    double correlation = Math.random();
-                    if (Math.abs(correlation) > 0.5){
+                    if (Math.abs(correlation) > 0.1){
                         bw.write("t," + gene.get(i)+","+gene.get(j)+",");
                         bw.write(formatDouble.format(correlation));
                         bw.write("\n");
@@ -248,7 +248,23 @@ public class ExpressionMatrix{
     }
 
     public static void main(String[] args) {
-        classify(100,10);
+//        classify(100,10);
+        int start = 10;
+        for (int row = 0; row < 10; row++) {
+            for (int col = 0; col < 30; col++) {
+                if (row + start> col){
+                    System.out.println(row + ", " + col + ", "  + (((row+start))*(row + start-1)/2 - (start)*(start-1)/2  + col));
+                }
+            }
+        }
+        int aa = 0;
+
+        for (int i = 10; i < 20; i++) {
+            aa +=i;
+        }
+
+        System.out.println(aa);
+
     }
 
     public static void  classify(int sum, int a){

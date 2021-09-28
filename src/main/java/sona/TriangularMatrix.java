@@ -71,7 +71,7 @@ public class TriangularMatrix {
 //        this.br1 = new BufferedReader(new FileReader(this.filename));
 //    }
 
-    public void calculate() throws IOException {
+    public void calAvr() throws IOException {
         BufferedReader br1 = new BufferedReader(new FileReader(this.filename));
         String str;
         br1.readLine();

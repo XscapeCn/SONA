@@ -9,23 +9,21 @@ import java.util.List;
 
 public class FastGCN {
     public static void main(String[] args) {
-        ExpressionMatrix em1 = new ExpressionMatrix("D:/Desktop/ScriptsInNetwork/Data/Expression/S4Leaf.txt");
+//        ExpressionMatrix em1 = new ExpressionMatrix("D:/Desktop/ScriptsInNetwork/Data/Expression/S4Leaf.txt");
         ExpressionMatrix em = new ExpressionMatrix("D:/Desktop/ScriptsInNetwork/Data/Expression/S4Leaf.txt");
         System.out.println("cols" + "\t" + "GPU" + "\t" + "CPU");
 
-        List<Integer> index = new ArrayList<>();
-        for (int i = 0; i < em.getExpression().size(); i++) {
-            index.add(i*(i+1)/2 + 1);
-        }
-
-
-        em1.setExpression(500);
-        System.out.print(500 + "\t");
-        compare(em1,index);
-        System.out.print(500 + "\t");
-        compare(em1,index);
-
-
+//        List<Integer> index = new ArrayList<>();
+//        for (int i = 0; i < em.getExpression().size(); i++) {
+//            index.add(i*(i+1)/2 + 1);
+//        }
+//
+//
+//        em1.setExpression(500);
+//        System.out.print(500 + "\t");
+//        compare(em1,index);
+//        System.out.print(500 + "\t");
+//        compare(em1,index);
 
 
 //        int[] cols = new int[]{50000,25600,12800,6400,3200,1600,800,400,200,100};
@@ -36,7 +34,8 @@ public class FastGCN {
         for (int col : cols) {
             System.out.print(col + "\t");
             em.setExpression(col);
-            compare(em,index);
+            em.writeRelateFile();
+//            compare(em);
         }
 
     }
@@ -58,21 +57,16 @@ public class FastGCN {
         return -1;
     }
 
-    public static void compare(ExpressionMatrix em,List<Integer> index){
+    public static void compare(ExpressionMatrix em){
         List<List<Double>> expression1 = em.getExpression();
-
         final double[][] myArray = new double[expression1.size()][];
-
         for (int i=0;i<expression1.size(); i++){
             myArray[i] = expression1.get(i).stream().mapToDouble(Double::floatValue).toArray();
         }
-
         int gene = expression1.size();
 //        int gene =50000;w
         int count = (gene/2)*(gene-1);
         final double[] aa = {0};
-
-
 
 //        final double[] e = new double[count];
         Kernel kernel = new Kernel() {
@@ -80,7 +74,6 @@ public class FastGCN {
             public void run() {
 //                int gid = getGlobalId();
 //                int row = 0;
-
                 int row = getGlobalId(0);
                 int col = getGlobalId(1);
 
@@ -113,14 +106,11 @@ public class FastGCN {
 //                    }
 //                }
 
-
 //                double aa = (sxy / n - sx * sy / n / n) / (Math.sqrt(sxx / n -  sx * sx / n / n)) / (Math.sqrt(syy / n -  sy * sy / n / n));
 //                e[gid] = cov/sigmaX/sigmaY;
-
 //                e[gid]= (sxy / n - sx * sy / n / n) / (Math.sqrt(sxx / n -  sx * sx / n / n)) / (Math.sqrt(syy / n -  sy * sy / n / n));
             }
         };
-
 
         Kernel kernel2 = new Kernel() {
             @Override
@@ -172,7 +162,6 @@ public class FastGCN {
 //            kernel2.dispose();
 //            System.out.print("\n");
 //        }
-
 
         Range range = Range.create2D(gene,gene);
 //        Range range2 = Range.create(50000*50000);
