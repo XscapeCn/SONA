@@ -239,10 +239,10 @@ public class TriangularMatrix {
         return a;
     }
 
-    public static List readGeneList(String filename) throws IOException{
+    public static List<String> readGeneList(String filename) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String str = null;
-        List gene = new ArrayList<String>();
+        List<String> gene = new ArrayList<>();
         while ((str = br.readLine()) !=null) {
             gene.add(str);
         }
