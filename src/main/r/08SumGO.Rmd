@@ -1,0 +1,41 @@
+---
+title: "GO"
+author: "Song"
+date: "2021/9/2"
+output: html_document
+---
+
+```{r setup}
+m12 <- read.table("D:/Desktop/ScriptsInNetwork/AwnM12GO.txt", sep = "\t", header = 1)
+m12 <- as.data.frame(m12$Term)
+m12$m12 <- 1
+colnames(m12)[1] <- "term"
+
+m15 <- read.table("D:/Desktop/ScriptsInNetwork/AwnM15GO.txt", sep = "\t", header = 1)
+m15 <- as.data.frame(m15$Term)
+m15$m15 <- 1
+colnames(m15)[1] <- "term"
+
+m52 <- read.table("D:/Desktop/ScriptsInNetwork/AwnM52GO.txt", sep = "\t", header = 1)
+m52 <- as.data.frame(m52$Term)
+m52$m52 <- 1
+colnames(m52)[1] <- "term"
+
+m12 <- m12[1:50,]
+m15 <- m15[1:50,]
+m52 <- m52[1:50,]
+
+df <- merge(m12,m15,by = "term", all = TRUE)
+df <- merge(df,m52,by = "term", all = TRUE)
+
+df[is.na(df)] <- 0
+row.names(df) <- df[,1]
+df <- df[,-1]
+
+library("pheatmap")
+# pheatmap(t(df[,2:4]))
+pheatmap(t(df),cluster_row = F,cluster_cols = F, border_color = "#dadada", show_rownames=T,show_colnames=T,  color = c("#EEEBDD", "#1E6F5C"))
+
+
+```
+.

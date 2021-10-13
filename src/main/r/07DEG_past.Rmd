@@ -1,0 +1,235 @@
+---
+title: "7DEG"
+author: "Song"
+date: "2021/9/1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("ggplot2")
+library("DESeq2")
+library("viridis")
+```
+
+
+```{r readData, echo=TRUE}
+# deg <- read.csv("D:/Desktop/DEG_LA.csv", header = 1)
+# consever <- deg[which(deg$log2FoldChange < 2 & deg$log2FoldChange > -2),]
+res <- read.table("D:/Desktop/LA_DEG_result.txt")
+awnm <- read.table("D:/Desktop/S4AwnGeneInModule.txt")
+leafm <- read.table("D:/Desktop/S4LeafGeneInModule.txt")
+
+df <- merge(res,awnm,by =0,all = TRUE)
+rownames(df) <- df[,1]
+df <- df[,-1]
+df <- df[,-8]
+colnames(df)[7] <- "awnm"
+
+df <- merge(df,leafm,by =0,all = TRUE)
+rownames(df) <- df[,1]
+df <- df[,-1]
+df <- df[,-9]
+colnames(df)[8] <- "leafm"
+
+df[which(abs(df$log2FoldChange) < 1 & df$padj <= 0.05) ,9 ] <- "Same"
+df[which(df$padj > 0.05) ,9 ] <- "Not significant"
+df[which(df$log2FoldChange >= 1 & df$padj <= 0.05) ,9 ] <- "Rise"
+df[which(df$log2FoldChange <= -1 & df$padj <= 0.05) ,9 ] <- "Down"
+
+# df <- read.table("D:/Desktop/ScriptsInNetwork/DEG_LA.txt", sep = "\t")
+dff <-read.table(file="D:/Desktop/ScriptsInNetwork/Results/DEG/DEG_LA.txt", sep = "\t")
+
+write.table(df, file="D:/Desktop/ScriptsInNetwork/Results/DEG/DEG_LS.txt", sep = "\t", quote = F)
+```
+
+```{r volcano, echo=TRUE}
+ggplot(df) + geom_point(aes(x=log2FoldChange,y=-log10(padj),color=DEG), size =  0.2, alpha = 0.2)+ylim(0,310)+xlim(-8,8)+
+  theme_bw()+theme(text = element_text(size = 15))
+```
+
+
+```{r plotDEGInModules, echo=TRUE}
+plot <- df
+plot[which(plot$deg=="Not significant"),9] <- NA
+
+ggplot(data=subset(plot,!is.na(plot$deg)), aes(x=stemm,fill =deg)) +
+  geom_bar(position="fill")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,72)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$deg)), aes(x=stemm,fill =deg)) +
+  geom_bar(position="stack")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,72)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$deg)), aes(x=leafm, fill = deg)) +
+  geom_bar(position="stack")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,35)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$deg)), aes(x=leafm,fill = deg)) +
+  geom_bar(position="fill")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,35)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+```
+
+```{r analyzeAwnM12, echo=FALSE}
+# awnM12 <- row.names(df)[which(df$awnm == 12)]
+# awnm12Inleaf <- df[awnM12,]
+# ggplot(data=awnm12Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM15 <- row.names(df)[which(df$awnm == 15)]
+# awnm15Inleaf <- df[awnM15,]
+# ggplot(data=awnm15Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM52 <- row.names(df)[which(df$awnm == 52)]
+# awnm52Inleaf <- df[awnM52,]
+# ggplot(data=awnm52Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM43 <- row.names(df)[which(df$awnm == 43)]
+# awnm43Inleaf <- df[awnM43,]
+# ggplot(data=awnm43Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+
+for (i in 1:70) {
+  p <- ggplot(data=df[row.names(df)[which(df$awnm == i)],], aes(x=leafm)) +
+    geom_bar(position="stack")+
+    labs(title = paste("AwnM",i,"InLeaf",sep=""))+
+    theme_bw()+
+    xlim(0.5,35)+
+    theme(text = element_text(size = 15))
+  print(p)
+}
+
+```
+M12: p-value < 2.2e-16
+M12: TraesCS5D02G329600
+
+
+
+# The below is DEG of Leaf & Stem
+```{r}
+res <- read.table("D:/Desktop/ScriptsInNetwork/Results/DEG/LS_DEG_raw_result.txt")
+leafm <- read.table("D:/Desktop/S4LeafGeneInModule.txt")
+stemm <- read.table("D:/Desktop/S4StemGeneInModule.txt")
+
+df <- merge(res,leafm,by =0,all = TRUE)
+rownames(df) <- df[,1]
+df <- df[,-1]
+df <- df[,-8]
+colnames(df)[7] <- "leafm"
+
+df <- merge(df,stemm,by =0,all = TRUE)
+rownames(df) <- df[,1]
+df <- df[,-1]
+df <- df[,-9]
+colnames(df)[8] <- "stemm"
+
+df[which(abs(df$log2FoldChange) < 1 & df$padj <= 0.05) ,9 ] <- "Same"
+df[which(df$padj > 0.05) ,9 ] <- "Not significant"
+df[which(df$log2FoldChange >= 1 & df$padj <= 0.05) ,9 ] <- "Rise"
+df[which(df$log2FoldChange <= -1 & df$padj <= 0.05) ,9 ] <- "Down"
+colnames(df)[9] <- "DEG"
+
+# df <- read.table("D:/Desktop/ScriptsInNetwork/DEG_LA.txt", sep = "\t")
+
+write.table(df, file="D:/Desktop/ScriptsInNetwork/Results/DEG/DEG_LS.txt", sep = "\t", quote = F)
+```
+
+```{r volcano, echo=TRUE}
+ggplot(df) + geom_point(aes(x=log2FoldChange,y=-log10(padj),color=DEG), size =  0.2, alpha = 0.2)+ylim(0,310)+xlim(-8,8)+
+  theme_bw()+theme(text = element_text(size = 15))
+```
+
+```{r plotDEGInModules, echo=TRUE}
+plot <- df
+plot[which(plot$DEG=="Not significant"),9] <- NA
+
+ggplot(data=subset(plot,!is.na(plot$DEG)), aes(x=stemm,fill =DEG)) +
+  geom_bar(position="fill")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,72)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$DEG)), aes(x=stemm,fill =DEG)) +
+  geom_bar(position="stack")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,72)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$DEG)), aes(x=leafm, fill = DEG)) +
+  geom_bar(position="stack")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,35)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+
+ggplot(data=subset(plot,!is.na(plot$DEG)), aes(x=leafm,fill = DEG)) +
+  geom_bar(position="fill")+
+  theme_bw()+scale_fill_viridis(discrete = T) +
+  xlim(0.5,35)+
+  theme(text = element_text(size = 15))+ scale_fill_brewer(palette="Blues")
+```
+
+```{r analyzeAwnM12, echo=FALSE}
+# awnM12 <- row.names(df)[which(df$awnm == 12)]
+# awnm12Inleaf <- df[awnM12,]
+# ggplot(data=awnm12Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM15 <- row.names(df)[which(df$awnm == 15)]
+# awnm15Inleaf <- df[awnM15,]
+# ggplot(data=awnm15Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM52 <- row.names(df)[which(df$awnm == 52)]
+# awnm52Inleaf <- df[awnM52,]
+# ggplot(data=awnm52Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+# 
+# awnM43 <- row.names(df)[which(df$awnm == 43)]
+# awnm43Inleaf <- df[awnM43,]
+# ggplot(data=awnm43Inleaf, aes(x=leafm)) +
+#   geom_bar(position="stack")+
+#   theme_bw()+scale_fill_viridis(discrete = T) +
+#   xlim(0.5,35)+
+#   theme(text = element_text(size = 15))
+
+for (i in 1:70) {
+  p <- ggplot(data=df[row.names(df)[which(df$stemm == i)],], aes(x=leafm)) +
+    geom_bar(position="stack")+
+    labs(title = paste("StemM",i,"InLeaf",sep=""))+
+    theme_bw()+
+    xlim(0.5,35)+
+    theme(text = element_text(size = 15))
+  print(p)
+}
+```
