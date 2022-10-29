@@ -128,9 +128,10 @@ public class FastGCN {
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        ExpressionMatrix em = new ExpressionMatrix("D:/Desktop/ScriptsInNetwork/Data/Expression/S4Leaf.txt");
-        BufferedWriter bw = new BufferedWriter(new FileWriter("D:/Desktop/test.txt"));
+        ExpressionMatrix em = new ExpressionMatrix("E:/Song/Desktop/Data/Expression/S4Leaf.txt");
+        BufferedWriter bw = new BufferedWriter(new FileWriter("E:/Song/Desktop/Data/Expression/S4LeafCorr.txt"));
         calCorrDistribute(em,bw, 5000);
         bw.close();
+        //to do list: array out of bounds happens when the number > INT_MAX.
     }
 }

@@ -13,7 +13,7 @@ public class FindPos {
     public FindPos(){
 //        HashMap<Integer, String> map = new HashMap<>();
         HashMap map = new HashMap<Integer, String>();
-        List temp = new ArrayList<String>();
+        List<String> temp = new ArrayList<>();
         map.put(0, "!");
         map.put(1, "\"");
         map.put(2, "#");

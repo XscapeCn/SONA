@@ -9,7 +9,7 @@ public class TransGeneToNum {
 
 
     public TransGeneToNum(){
-        BufferedReader br = IOUtils.getTextReader("D:/Desktop/ScriptsInNetwork/Data/geneList.txt");
+        BufferedReader br = IOUtils.getTextReader("E:/Song/Desktop/Data/geneList.txt");
 //        BufferedReader br = IOUtils.getTextReader("/data1/home/songxu/task/WGCNA/Data/Expression/geneList.txt");
         try{
             String str;
@@ -27,7 +27,7 @@ public class TransGeneToNum {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("D:/Desktop/geneList.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("E:/Song/Desktop/Data/geneList.txt"));
         List<String> gene = new ArrayList<>();
         List<List<String>> res = new ArrayList<>();
 
