@@ -9,7 +9,7 @@ public class TransGeneToNum {
 
 
     public TransGeneToNum(){
-        BufferedReader br = IOUtils.getTextReader("E:/Song/Desktop/Data/geneList.txt");
+        BufferedReader br = IOUtils.getTextReader("/mnt/e/Song/Desktop/Data/geneList.txt");
 //        BufferedReader br = IOUtils.getTextReader("/data1/home/songxu/task/WGCNA/Data/Expression/geneList.txt");
         try{
             String str;

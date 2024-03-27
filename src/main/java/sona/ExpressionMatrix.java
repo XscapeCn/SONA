@@ -102,10 +102,10 @@ public class ExpressionMatrix{
 //                System.out.println(str);
                 String[] split = str.split("\t");
 //                System.out.println(str);
-                geneName.add(split[3]);
-                gene.add(tg.getIndexOfGene(split[3]));
+                geneName.add(split[0]);
+                gene.add(tg.getIndexOfGene(split[0]));
                 List<Double> temp = new ArrayList<>();
-                for (int i = 4; i < split.length; i++) {
+                for (int i = 1; i < split.length; i++) {
                     temp.add(Double.parseDouble(split[i]));
                 }
                 this.expression.add(temp);
