@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
+  <info>
+    <title>IGDB</title>
+    <id>http://www.zotero.org/styles/the-plant-cell-custom</id>
+    <link href="http://www.zotero.org/styles/the-plant-cell-custom" rel="self"/>
+    <author>
+      <name>Modified by ChatGPT</name>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="biology"/>
+    <updated>2025-05-22T00:00:00+00:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name and="text" initialize-with="" name-as-sort-order="all" sort-separator=" ">
+        <name-part name="family" font-weight="bold"/>
+        <name-part name="given" font-weight="bold"/>
+      </name>
+      <label form="short" prefix=" "/>
+      <substitute>
+        <names variable="editor"/>
+        <text variable="title"/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="year-date">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" strip-periods="true"/>
+  </macro>
+
+  <macro name="journal-info">
+    <group delimiter=":" prefix=" ">
+      <text macro="year-date"/>
+      <group delimiter="">
+        <text variable="volume" font-weight="bold"/>
+        <text variable="issue" prefix="(" suffix=")"/>
+      </group>
+      <text variable="page"/>
+    </group>
+  </macro>
+
+  <macro name="access">
+    <!-- intentionally left empty to suppress DOI/URL -->
+  </macro>
+
+  <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" collapse="year">
+    <sort>
+      <key macro="year-date"/>
+      <key macro="author"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <group delimiter=" ">
+          <text macro="author"/>
+          <text macro="year-date"/>
+        </group>
+        <text variable="locator"/>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography et-al-min="11" et-al-use-first="10" hanging-indent="true">
+    <sort>
+      <key macro="author"/>
+      <key macro="year-date"/>
+      <key variable="title"/>
+    </sort>
+    <layout>
+      <group delimiter=". " suffix=".">
+        <text macro="author"/>
+        <text macro="title"/>
+        <group delimiter=". ">
+          <text macro="container-title"/>
+          <text macro="journal-info"/>
+        </group>
+      </group>
+      <text macro="access"/>
+    </layout>
+  </bibliography>
+</style>
